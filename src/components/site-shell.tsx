@@ -16,9 +16,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
   const { count } = useCart();
   return <div className="min-h-screen bg-background text-foreground">
     <div className="bg-foreground text-background">
-      <div className="site-container flex min-h-9 items-center justify-between gap-4 py-2 text-xs font-semibold">
-        <span>Print • Brand • Deliver across Kenya</span>
-        <div className="hidden items-center gap-5 sm:flex">{phones.map(p=><a key={p.tel} href={`tel:${p.tel}`} className="hover:text-primary">{p.label}</a>)}<a href={`mailto:${email}`} className="hover:text-primary">Email us</a></div>
+      <div className="site-container flex flex-wrap items-center justify-center gap-x-5 gap-y-1 py-2 text-center text-xs font-semibold sm:flex-nowrap sm:justify-between sm:text-left">
+        <span className="w-full sm:w-auto">Print • Brand • Deliver across Kenya</span>
+        <div className="flex items-center gap-4 sm:gap-5">{phones.map(p=><a key={p.tel} href={`tel:${p.tel}`} className="hover:text-primary">{p.label}</a>)}<a href={`mailto:${email}`} className="hover:text-primary">Email us</a></div>
       </div>
     </div>
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
@@ -38,7 +38,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       </div>
       <div className="hidden border-t border-border xl:block"><div className="site-container flex items-center justify-between py-3">{categories.slice(0, 6).map((category) => <Link key={category.slug} to="/shop" search={{ category: category.slug, q: undefined }} className="text-xs font-semibold text-muted-foreground hover:text-primary">{category.name}</Link>)}</div></div>
     </header>
-    {open && <div className="fixed inset-0 z-50 bg-foreground text-background lg:hidden"><div className="site-container flex h-20 items-center justify-between"><strong className="font-display text-xl">LOWYALTY</strong><Button variant="ghost" size="icon" aria-label="Close menu" className="text-background" onClick={() => setOpen(false)}><X /></Button></div><nav className="site-container grid gap-1 pt-8">{nav.map(([label, to]) => <Link key={to} to={to} onClick={() => setOpen(false)} className="border-b border-background/15 py-5 font-display text-3xl">{label}</Link>)}</nav></div>}
+    {open && <div className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-foreground text-background lg:hidden"><div className="site-container flex h-20 shrink-0 items-center justify-between"><strong className="font-display text-xl">LOWYALTY</strong><Button variant="ghost" size="icon" aria-label="Close menu" className="text-background" onClick={() => setOpen(false)}><X /></Button></div><nav className="site-container grid gap-1 pt-8" aria-label="Mobile navigation">{nav.map(([label, to]) => <Link key={to} to={to} onClick={() => setOpen(false)} className="border-b border-background/15 py-5 font-display text-3xl">{label}</Link>)}</nav><div className="site-container mt-auto grid gap-3 pb-10 pt-8 text-sm">{phones.map(p=><a key={p.tel} href={`tel:${p.tel}`} className="flex items-center gap-2 font-bold hover:text-primary"><Phone size={17} className="shrink-0 text-primary"/>{p.label}</a>)}<a href={`mailto:${email}`} className="flex items-center gap-2 break-all hover:text-primary"><Mail size={17} className="shrink-0 text-primary"/>{email}</a></div></div>}
     <main>{children}</main>
     <footer className="mt-20 border-t-4 border-primary bg-footer text-footer-foreground">
       <div className="site-container grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
