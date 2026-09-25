@@ -24,7 +24,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <div className="site-container flex h-20 items-center justify-between gap-5">
         <Link to="/" aria-label="Lowyalty Brandingline home" className="flex shrink-0 items-center gap-3">
-          <img src="/favicon.png" alt="Lowyalty Brandingline logo" width={44} height={44} className="size-11 rounded-md object-contain bg-primary" />
+          <img src="/favicon.png" alt="Lowyalty Brandingline logo" width={44} height={44} className="size-11 object-contain" />
           <span className="hidden leading-none sm:block"><strong className="block font-display text-lg">LOWYALTY</strong><span className="text-[10px] font-bold uppercase tracking-[.14em] text-muted-foreground">Brandingline Ltd</span></span>
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
@@ -42,7 +42,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
     <main>{children}</main>
     <footer className="mt-20 border-t-4 border-primary bg-footer text-footer-foreground">
       <div className="site-container grid gap-10 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-        <div><div className="mb-5 flex items-center gap-3"><img src="/favicon.png" alt="Lowyalty Brandingline logo" width={40} height={40} className="size-10 rounded-md object-contain bg-primary" /><strong className="font-display text-xl">LOWYALTY</strong></div><p className="max-w-sm text-sm leading-7 text-muted-foreground">Thoughtful print, signage and branded merchandise made to help Kenyan businesses show up with confidence.</p></div>
+        <div><div className="mb-5 flex items-center gap-3"><img src="/favicon.png" alt="Lowyalty Brandingline logo" width={40} height={40} className="size-10 object-contain" /><strong className="font-display text-xl">LOWYALTY</strong></div><p className="max-w-sm text-sm leading-7 text-muted-foreground">Thoughtful print, signage and branded merchandise made to help Kenyan businesses show up with confidence.</p></div>
         <div><h2 className="mb-4 text-sm font-black uppercase">Explore</h2><div className="grid gap-3 text-sm">{nav.slice(0,4).map(([label,to]) => <Link key={to} to={to} className="hover:text-primary">{label}</Link>)}</div></div>
         <div><h2 className="mb-4 text-sm font-black uppercase">Popular</h2><div className="grid gap-3 text-sm">{categories.slice(0,4).map(c => <Link key={c.slug} to="/shop" search={{category:c.slug,q:undefined}} className="hover:text-primary">{c.name}</Link>)}</div></div>
         <div><h2 className="mb-4 text-sm font-black uppercase">Talk to us</h2><div className="grid gap-4 text-sm"><span className="flex gap-2"><Phone size={17} className="shrink-0 text-primary"/><span>{phones.map((p,i)=><span key={p.tel}>{i>0&&" / "}<a href={`tel:${p.tel}`} className="hover:text-primary">{p.label}</a></span>)}</span></span><a href={`mailto:${email}`} className="flex gap-2 break-all hover:text-primary"><Mail size={17} className="shrink-0 text-primary"/>{email}</a>{locations.map(l=><span key={l.town} className="flex gap-2"><MapPin size={17} className="shrink-0 text-primary"/><span><strong>{l.town}</strong><br/>{l.address}</span></span>)}</div></div>
