@@ -58,7 +58,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           </form>
         </div>
       </div>
-      <div className="site-container grid gap-10 py-14 md:grid-cols-[1.2fr_1fr_1fr_1fr_1fr]">
+      <div className="site-container grid gap-10 py-14 md:grid-cols-[1.1fr_1fr_1fr_1fr_1.3fr]">
         <div>
           <div className="mb-5 flex items-center gap-3">
             <img src="/favicon.png" alt="Lowyalty Brandingline logo" width={44} height={44} className="size-11 object-contain" />
@@ -112,9 +112,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </span>)}
             <span className="flex gap-3">
               <Phone size={18} className="mt-0.5 shrink-0 text-[oklch(0.82_0.16_85)]"/>
-              <span>{phones.map((p,i)=><span key={p.tel}>{i>0&&" / "}<a href={`tel:${p.tel}`} className="transition-colors hover:text-[oklch(0.82_0.16_85)]">{p.label}</a></span>)}</span>
+              <span className="whitespace-nowrap">{phones.map((p,i)=><span key={p.tel}>{i>0&&" / "}<a href={`tel:${p.tel}`} className="transition-colors hover:text-[oklch(0.82_0.16_85)]">{p.label}</a></span>)}</span>
             </span>
-            <a href={`mailto:${email}`} className="flex gap-3 break-all transition-colors hover:text-[oklch(0.82_0.16_85)]"><Mail size={18} className="mt-0.5 shrink-0 text-[oklch(0.82_0.16_85)]"/>{email}</a>
+            <a href={`mailto:${email}`} className="flex gap-3 whitespace-nowrap transition-colors hover:text-[oklch(0.82_0.16_85)]"><Mail size={18} className="mt-0.5 shrink-0 text-[oklch(0.82_0.16_85)]"/>{email}</a>
             <span className="flex gap-3">
               <svg viewBox="0 0 24 24" className="mt-0.5 size-[18px] shrink-0 text-[oklch(0.82_0.16_85)]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               <span><strong className="text-white">Mon - Sat</strong><br/>8:00 AM - 7:00 PM</span>
