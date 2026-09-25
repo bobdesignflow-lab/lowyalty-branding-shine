@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lowyalty Brandingline Ltd" },
-      { name: "description", content: "Print, branding, signage and promotional products in Nairobi, Kenya." },
+      { name: "description", content: "Print, branding, signage and promotional products in Limuru and Ngong, Kenya." },
       { name: "author", content: "Lowyalty Brandingline Ltd" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
