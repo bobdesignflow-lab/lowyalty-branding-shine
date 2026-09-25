@@ -34,7 +34,10 @@ export const Route = createFileRoute("/")({
     { name: "description", content: "Custom printing, signage, branded apparel and packaging made in Nairobi by Lowyalty Brandingline Ltd." },
     { property: "og:title", content: "Lowyalty Brandingline Ltd — Print with impact" },
     { property: "og:description", content: "Reliable print and branding for businesses, events and everyday moments." },
-    { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
+    { property: "og:image", content: "/favicon.png" },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: "/favicon.png" },
   ]}),
   component: HomePage,
 });

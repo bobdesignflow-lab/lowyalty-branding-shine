@@ -83,7 +83,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Print, branding, signage and promotional products in Limuru and Ngong, Kenya." },
       { name: "author", content: "Lowyalty Brandingline Ltd" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Lowyalty Brandingline Ltd — Print with impact" },
+      { property: "og:description", content: "Print, branding, signage and promotional products in Limuru and Ngong, Kenya." },
+      { property: "og:image", content: "/favicon.png" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/favicon.png" },
+      { name: "msapplication-TileImage", content: "/favicon.png" },
     ],
     links: [
       {
@@ -94,6 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
     ],
   }),
   shellComponent: RootShell,

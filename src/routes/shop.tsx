@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/product-card";
 const searchSchema = z.object({ q: z.string().optional(), category: z.string().optional() });
 export const Route = createFileRoute("/shop")({
   validateSearch: searchSchema,
-  head: () => ({ meta: [ { title: "Print Shop | Lowyalty Brandingline" }, { name: "description", content: "Shop business cards, branded apparel, banners, packaging and stickers in Nairobi." }, { property: "og:title", content: "Lowyalty Print Shop" }, { property: "og:description", content: "Custom print and branding products for Kenyan businesses." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" } ] }),
+  head: () => ({ meta: [ { title: "Print Shop | Lowyalty Brandingline" }, { name: "description", content: "Shop business cards, branded apparel, banners, packaging and stickers in Nairobi." }, { property: "og:title", content: "Lowyalty Print Shop" }, { property: "og:description", content: "Custom print and branding products for Kenyan businesses." }, { property: "og:image", content: "/favicon.png" }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }, { name: "twitter:image", content: "/favicon.png" } ] }),
   component: ShopPage,
 });
 function ShopPage() {
