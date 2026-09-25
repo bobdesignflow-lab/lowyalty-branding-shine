@@ -165,3 +165,98 @@
 @utility section-pad {
   padding-block: clamp(4rem, 8vw, 7rem);
 }
+
+/* WhatsApp float button: breathing glow, expanding ripple rings, shine sweep */
+@utility wa-attract {
+  position: relative;
+  animation: wa-glow 2.6s ease-in-out infinite;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 9999px;
+    border: 2px solid color-mix(in oklab, var(--color-whatsapp) 70%, transparent);
+    pointer-events: none;
+    animation: wa-ring 2.6s cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
+  }
+
+  &::after {
+    animation-delay: 1.3s;
+  }
+}
+
+@utility wa-shine {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 9999px;
+  pointer-events: none;
+
+  & > span {
+    position: absolute;
+    top: -25%;
+    bottom: -25%;
+    left: 0;
+    width: 40%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgb(255 255 255 / 75%),
+      transparent
+    );
+    animation: wa-shine 3.4s ease-in-out infinite;
+  }
+}
+
+@keyframes wa-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 color-mix(in oklab, var(--color-whatsapp) 40%, transparent),
+      0 10px 26px -8px rgb(0 0 0 / 45%);
+  }
+  50% {
+    box-shadow:
+      0 0 24px 6px color-mix(in oklab, var(--color-whatsapp) 70%, transparent),
+      0 0 58px 16px color-mix(in oklab, var(--color-whatsapp) 30%, transparent),
+      0 10px 26px -8px rgb(0 0 0 / 45%);
+  }
+}
+
+@keyframes wa-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+@keyframes wa-shine {
+  0%,
+  55% {
+    transform: translateX(-180%) rotate(18deg);
+  }
+  85%,
+  100% {
+    transform: translateX(280%) rotate(18deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-attract,
+  .wa-attract::before,
+  .wa-attract::after,
+  .wa-shine,
+  .wa-shine > span {
+    animation: none;
+  }
+}
+
