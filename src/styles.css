@@ -65,6 +65,7 @@
   --color-footer-foreground: var(--footer-foreground);
   --color-footer-dark: var(--footer-dark);
   --color-footer-dark-foreground: var(--footer-dark-foreground);
+  --color-whatsapp: var(--whatsapp);
 }
 
 :root {
@@ -92,6 +93,7 @@
   --footer-foreground: oklch(0.2 0.01 30);
   --footer-dark: oklch(0.16 0.01 30);
   --footer-dark-foreground: oklch(0.82 0.01 60);
+  --whatsapp: oklch(0.72 0.19 150);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
