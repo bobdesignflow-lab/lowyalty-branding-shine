@@ -16,18 +16,18 @@ export type Product = {
 };
 
 export const categories = [
-  { name: "Marketing & Promo", slug: "marketing", image: signage, blurb: "Flyers, brochures and campaign materials" },
-  { name: "Office Stationery", slug: "stationery", image: stationery, blurb: "Business cards, letterheads and notebooks" },
-  { name: "Apparel", slug: "apparel", image: apparel, blurb: "T-shirts, hoodies, caps and uniforms" },
-  { name: "Packaging", slug: "packaging", image: packaging, blurb: "Bags, boxes, labels and product sleeves" },
-  { name: "Banners & Displays", slug: "displays", image: signage, blurb: "Roll-ups, flags and exhibition displays" },
-  { name: "Corporate Gifts", slug: "gifts", image: stationery, blurb: "Curated gifts for teams and clients" },
-  { name: "Labels & Stickers", slug: "stickers", image: packaging, blurb: "Custom-cut labels for every surface" },
+  { name: "Marketing & Promo", slug: "marketing", image: signage, blurb: "Flyers, brochures and campaign materials", featured: true },
+  { name: "Office Stationery", slug: "stationery", image: stationery, blurb: "Business cards, letterheads and notebooks", featured: true },
+  { name: "Apparel", slug: "apparel", image: apparel, blurb: "T-shirts, hoodies, caps and uniforms", featured: true },
+  { name: "Packaging", slug: "packaging", image: packaging, blurb: "Bags, boxes, labels and product sleeves", featured: true },
+  { name: "Banners & Displays", slug: "displays", image: signage, blurb: "Roll-ups, flags and exhibition displays", featured: true },
+  { name: "Corporate Gifts", slug: "gifts", image: stationery, blurb: "Curated gifts for teams and clients", featured: true },
+  { name: "Signage", slug: "signage", image: signage, blurb: "Indoor, outdoor, directional and light box signs", featured: true },
+  { name: "Labels & Stickers", slug: "stickers", image: packaging, blurb: "Custom-cut labels for every surface", featured: true },
   { name: "Vehicle Branding", slug: "vehicle", image: signage, blurb: "Fleet graphics and vehicle wraps" },
   { name: "Awards & Recognition", slug: "awards", image: stationery, blurb: "Certificates, trophies, medals and plaques" },
   { name: "Books & Publications", slug: "books", image: stationery, blurb: "Annual reports, manuals, booklets and novels" },
   { name: "Office & Environmental Branding", slug: "environmental", image: signage, blurb: "Wall murals, window film, event and podium branding" },
-  { name: "Signage", slug: "signage", image: signage, blurb: "Indoor, outdoor, directional and light box signs" },
   { name: "Personal & Event Print", slug: "events", image: stationery, blurb: "Wedding cards, invitations, programs and vouchers" },
   { name: "Trading Books", slug: "trading", image: stationery, blurb: "Invoice, receipt, LPO and delivery note books" },
 ];
