@@ -2,10 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { meta } from "@/components/content-page";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import signage from "@/assets/signage.jpg";
-import apparel from "@/assets/apparel.jpg";
-import stationery from "@/assets/stationery.jpg";
-import packaging from "@/assets/packaging.jpg";
+
 
 export const Route = createFileRoute("/corporate")({
   head: () => meta("Corporate Print Solutions | Lowyalty", "Consistent multi-item branding, staff kits, event collateral and repeat print support."),
@@ -43,10 +40,10 @@ function Hero() {
 
         <div className="relative animate-in fade-in zoom-in-95 duration-1000 lg:pb-10 lg:pl-6">
           <div className="overflow-hidden rounded-lg border border-background/10 shadow-2xl">
-            <img src={signage} alt="Large-format branded signage produced for a corporate client" className="aspect-[4/3] w-full object-cover sm:aspect-[5/4]" loading="eager" />
+            <img src="/assets/home/categories/banners-displays.jpg" alt="Large-format branded signage produced for a corporate client" className="aspect-[4/3] w-full object-cover object-center sm:aspect-[5/4]" loading="eager" />
           </div>
           <div className="absolute -bottom-6 -left-2 hidden w-[42%] overflow-hidden rounded-lg border-4 border-foreground shadow-xl sm:block lg:bottom-0 lg:-left-4">
-            <img src={apparel} alt="Branded staff apparel" className="aspect-square w-full object-cover" loading="lazy" />
+            <img src="/assets/home/categories/apparel.jpg" alt="Branded staff apparel" className="aspect-square w-full object-cover object-center" loading="lazy" />
           </div>
         </div>
       </div>
@@ -120,12 +117,12 @@ function Portfolio() {
           <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-8">
             <div className="overflow-hidden">
               <img
-                src={stationery}
+                src="/assets/home/categories/office-stationery.jpg"
                 alt="Corporate stationery suite including letterheads, envelopes, notebooks and business cards"
                 loading="lazy"
                 width={1200}
                 height={912}
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
             </div>
             <div className="border-t border-border bg-background p-6 sm:p-8">
@@ -144,12 +141,12 @@ function Portfolio() {
           <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-4">
             <div className="overflow-hidden">
               <img
-                src={apparel}
+                src="/assets/home/categories/apparel.jpg"
                 alt="Branded apparel and staff uniforms including t-shirts, hoodie, cap, tote bag and lanyard"
                 loading="lazy"
                 width={1200}
                 height={912}
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
             </div>
             <div className="border-t border-border bg-background p-6 sm:p-8">
@@ -168,12 +165,12 @@ function Portfolio() {
           <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-6">
             <div className="overflow-hidden">
               <img
-                src={signage}
+                src="/assets/home/categories/banners-displays.jpg"
                 alt="Large format signage, roll-up banners and event displays"
                 loading="lazy"
                 width={1200}
                 height={912}
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
             </div>
             <div className="border-t border-border bg-background p-6 sm:p-8">
@@ -192,12 +189,12 @@ function Portfolio() {
           <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-6">
             <div className="overflow-hidden">
               <img
-                src={packaging}
+                src="/assets/home/categories/packaging.jpg"
                 alt="Branded promotional merchandise, packaging and labels"
                 loading="lazy"
                 width={1200}
                 height={912}
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
             </div>
             <div className="border-t border-border bg-background p-6 sm:p-8">

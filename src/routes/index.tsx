@@ -4,7 +4,7 @@ import { useState } from "react";
 import { categories, products } from "@/lib/catalog";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
-import stationery from "@/assets/stationery.jpg";
+
 
 type Review = {
   quote: string;
@@ -48,7 +48,7 @@ function HomePage() {
   const search = () => navigate({ to: "/shop", search: { q: query || undefined, category: undefined } });
   return <>
     <section className="relative overflow-hidden bg-foreground text-background">
-      <img src={stationery} alt="Premium branded stationery by Lowyalty" width={1200} height={912} className="absolute inset-0 h-full w-full object-cover opacity-35" />
+      <img src="/assets/home/hero/hero.png" alt="Premium branded stationery by Lowyalty" width={1200} height={912} className="absolute inset-0 h-full w-full object-cover object-center opacity-35" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--foreground)_15%,transparent_90%)]" />
       <div className="site-container relative flex min-h-[610px] items-center py-20"><div className="max-w-3xl">
         <span className="mb-6 inline-flex items-center gap-2 border-l-4 border-primary pl-4 text-sm font-bold uppercase text-background/80"><Sparkles size={16}/>Made for brands that mean business</span>
@@ -59,7 +59,7 @@ function HomePage() {
       </div></div>
     </section>
 
-    <section className="section-pad"><div className="site-container"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><SectionTitle eyebrow="Everything you need" title="Explore our print categories" copy="Find a fast starting point, then customise size, finish, quantity and delivery with our team."/><Button variant="outline" asChild><Link to="/shop" search={{q:undefined,category:undefined}}>View all categories<ArrowRight size={17}/></Link></Button></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{categories.filter(c => c.featured).map((c, i) => <Link key={c.slug} to="/shop" search={{category:c.slug,q:undefined}} className="group relative min-h-72 overflow-hidden rounded-md"><img src={c.image} alt={c.name} loading="lazy" width={1200} height={912} className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"/><div className="absolute inset-0 bg-[linear-gradient(0deg,var(--foreground)_0%,var(--foreground)/85%_25%,var(--foreground)/55%_55%,var(--foreground)/30%_80%,transparent_100%)]"/><div className="absolute inset-0 bg-primary/0 transition-colors duration-500 group-hover:bg-primary/20"/><div className="absolute inset-x-0 bottom-0 p-6 text-background drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"><div className="absolute inset-0 -z-10 bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent"/><span className="mb-2 block text-xs font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)] drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">0{i+1}</span><h3 className="font-display text-xl font-bold leading-tight text-[oklch(0.99_0.005_90)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">{c.name}</h3><p className="mt-2 text-sm leading-5 text-[oklch(0.92_0.005_90)]/95 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">{c.blurb}</p><span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[oklch(0.82_0.16_85)] opacity-0 transition-all duration-300 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">Explore <ArrowRight size={12}/></span></div></Link>)}</div></div></section>
+    <section className="section-pad"><div className="site-container"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><SectionTitle eyebrow="Everything you need" title="Explore our print categories" copy="Find a fast starting point, then customise size, finish, quantity and delivery with our team."/><Button variant="outline" asChild><Link to="/shop" search={{q:undefined,category:undefined}}>View all categories<ArrowRight size={17}/></Link></Button></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{categories.filter(c => c.featured).map((c, i) => <Link key={c.slug} to="/shop" search={{category:c.slug,q:undefined}} className="group relative min-h-72 overflow-hidden rounded-md"><img src={c.image} alt={c.name} loading="lazy" width={1200} height={912} className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/><div className="absolute inset-0 bg-[linear-gradient(0deg,var(--foreground)_0%,var(--foreground)/85%_25%,var(--foreground)/55%_55%,var(--foreground)/30%_80%,transparent_100%)]"/><div className="absolute inset-0 bg-primary/0 transition-colors duration-500 group-hover:bg-primary/20"/><div className="absolute inset-x-0 bottom-0 p-6 text-background drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"><div className="absolute inset-0 -z-10 bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent"/><span className="mb-2 block text-xs font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)] drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">0{i+1}</span><h3 className="font-display text-xl font-bold leading-tight text-[oklch(0.99_0.005_90)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">{c.name}</h3><p className="mt-2 text-sm leading-5 text-[oklch(0.92_0.005_90)]/95 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">{c.blurb}</p><span className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[oklch(0.82_0.16_85)] opacity-0 transition-all duration-300 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">Explore <ArrowRight size={12}/></span></div></Link>)}</div></div></section>
 
     <section className="site-container mb-16">
       <div className="overflow-hidden rounded-xl bg-[oklch(0.18_0.02_255)] p-6 text-white sm:p-8">
@@ -161,7 +161,62 @@ function HomePage() {
 
     <section className="section-pad"><div className="site-container"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><SectionTitle eyebrow="Popular right now" title="Made to get noticed" copy="Our most requested print and branding essentials."/><Button variant="outline" asChild><Link to="/shop" search={{q:undefined,category:undefined}}>View all products<ArrowRight size={17}/></Link></Button></div><div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{products.filter(p => p.featured).map(p => <ProductCard key={p.slug} product={p}/>)}</div></div></section>
 
-    <section className="bg-foreground text-background"><div className="site-container grid gap-12 py-20 lg:grid-cols-2 lg:items-center"><img src={stationery} alt="Lowyalty print workmanship" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full rounded-md object-cover"/><div><span className="text-sm font-black uppercase text-primary">About Lowyalty</span><h2 className="mt-4 font-display text-4xl font-black sm:text-5xl">Your brand deserves more than ordinary print.</h2><p className="mt-6 text-lg leading-8 text-background/70">We help teams turn brand ideas into carefully produced materials—from everyday stationery to campaigns that take over a room.</p><Button variant="default" asChild className="mt-8"><Link to="/about">Meet our studio<ArrowRight size={17}/></Link></Button></div></div></section>
+    <section className="relative overflow-hidden bg-foreground text-background">
+      <div className="site-container py-20">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+          <div>
+            <span className="text-sm font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">OUR WORK</span>
+            <h2 className="mt-4 font-display text-4xl font-black leading-[1.08] sm:text-5xl">See what we've been creating.</h2>
+            <p className="mt-5 text-lg leading-8 text-background/70">From branded apparel and corporate stationery to signage, displays and promotional materials — explore real examples of Lowyalty's work.</p>
+            <Button variant="default" size="lg" asChild className="mt-8 bg-[oklch(0.82_0.16_85)] text-foreground hover:bg-[oklch(0.78_0.17_85)]">
+              <Link to="/samples">Explore Our Work <ArrowRight size={17}/></Link>
+            </Button>
+          </div>
+          <div className="relative">
+            <div className="grid grid-cols-6 grid-rows-2 gap-3 sm:gap-4">
+              <Link to="/samples" className="group relative col-span-6 row-span-2 overflow-hidden rounded-md sm:col-span-3">
+                <img src="/assets/samples/485986991_2932608753579031_1131907068483631116_n.jpg" alt="Corporate stationery samples" loading="lazy" width={1200} height={912} className="aspect-[4/5] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <span className="text-xs font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">01</span>
+                  <h3 className="mt-1 font-display text-lg font-bold leading-tight">Corporate Stationery</h3>
+                </div>
+              </Link>
+              <Link to="/samples" className="group relative col-span-3 row-span-1 overflow-hidden rounded-md">
+                <img src="/assets/samples/486082583_2932608543579052_152549413297026671_n.jpg" alt="Branded apparel samples" loading="lazy" width={1200} height={912} className="aspect-[4/3] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <span className="text-[10px] font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">02</span>
+                  <h3 className="mt-0.5 font-display text-sm font-bold leading-tight">Branded Apparel</h3>
+                </div>
+              </Link>
+              <Link to="/samples" className="group relative col-span-3 row-span-1 overflow-hidden rounded-md">
+                <img src="/assets/samples/486086821_2932608466912393_3585091760802311278_n.jpg" alt="Displays and signage samples" loading="lazy" width={1200} height={912} className="aspect-[4/3] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <span className="text-[10px] font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">03</span>
+                  <h3 className="mt-0.5 font-display text-sm font-bold leading-tight">Displays & Signage</h3>
+                </div>
+              </Link>
+              <Link to="/samples" className="group relative col-span-6 row-span-1 overflow-hidden rounded-md sm:col-span-6">
+                <img src="/assets/samples/486248427_2935324666640773_3678842428366277317_n.jpg" alt="Packaging and labels samples" loading="lazy" width={1200} height={912} className="aspect-[16/5] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+                <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/15 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
+                <div className="absolute inset-y-0 left-0 flex items-center p-5">
+                  <div>
+                    <span className="text-[10px] font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">04</span>
+                    <h3 className="mt-0.5 font-display text-base font-bold leading-tight">Packaging & Labels</h3>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="pointer-events-none absolute -top-8 -right-8 size-40 rounded-full bg-[oklch(0.82_0.16_85)]/10 blur-3xl"/>
+            <div className="pointer-events-none absolute -bottom-10 -left-10 size-56 rounded-full bg-primary/10 blur-3xl"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="bg-foreground text-background"><div className="site-container grid gap-12 py-20 lg:grid-cols-2 lg:items-center"><img src="/assets/home/categories/marketing-promo.jpg" alt="Lowyalty print workmanship" loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full rounded-md object-cover object-center"/><div><span className="text-sm font-black uppercase text-primary">About Lowyalty</span><h2 className="mt-4 font-display text-4xl font-black sm:text-5xl">Your brand deserves more than ordinary print.</h2><p className="mt-6 text-lg leading-8 text-background/70">We help teams turn brand ideas into carefully produced materials—from everyday stationery to campaigns that take over a room.</p><Button variant="default" asChild className="mt-8"><Link to="/about">Meet our studio<ArrowRight size={17}/></Link></Button></div></div></section>
 
     <section className="section-pad overflow-hidden">
       <div className="site-container">
