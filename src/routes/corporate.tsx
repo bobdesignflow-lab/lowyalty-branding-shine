@@ -1,8 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { meta } from "@/components/content-page";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import signage from "@/assets/signage.jpg";
 import apparel from "@/assets/apparel.jpg";
+import stationery from "@/assets/stationery.jpg";
+import packaging from "@/assets/packaging.jpg";
 
 export const Route = createFileRoute("/corporate")({
   head: () => meta("Corporate Print Solutions | Lowyalty", "Consistent multi-item branding, staff kits, event collateral and repeat print support."),
@@ -97,11 +100,136 @@ function Solutions() {
   );
 }
 
+function Portfolio() {
+  return (
+    <section className="section-pad" aria-labelledby="portfolio-title">
+      <div className="site-container">
+        <div className="max-w-3xl">
+          <span className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground">
+            <span className="h-px w-8 bg-primary" />Selected Corporate Work
+          </span>
+          <h2 id="portfolio-title" className="mt-5 font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-[2.6rem]">
+            Built for the way your brand shows up.
+          </h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
+            A selection of branding, print and visual production work created for organisations, teams, events and physical environments.
+          </p>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-7">
+          <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-8">
+            <div className="overflow-hidden">
+              <img
+                src={stationery}
+                alt="Corporate stationery suite including letterheads, envelopes, notebooks and business cards"
+                loading="lazy"
+                width={1200}
+                height={912}
+                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+              />
+            </div>
+            <div className="border-t border-border bg-background p-6 sm:p-8">
+              <span className="text-xs font-black uppercase tracking-[0.12em] text-primary">Corporate Branding</span>
+              <h3 className="mt-4 font-display text-2xl font-black leading-tight sm:text-3xl">Branding that works beyond the logo.</h3>
+              <p className="mt-4 max-w-2xl leading-7 text-muted-foreground transition-opacity duration-300 sm:opacity-80 group-hover:opacity-100">
+                From apparel and stationery to physical environments, we apply brand identities consistently across the materials people interact with every day.
+              </p>
+              <div className="mt-6 flex items-center gap-2 text-sm font-bold text-foreground">
+                <span className="transition-transform duration-300 group-hover:translate-x-0.5">View this work</span>
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </div>
+            </div>
+          </article>
+
+          <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-4">
+            <div className="overflow-hidden">
+              <img
+                src={apparel}
+                alt="Branded apparel and staff uniforms including t-shirts, hoodie, cap, tote bag and lanyard"
+                loading="lazy"
+                width={1200}
+                height={912}
+                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+              />
+            </div>
+            <div className="border-t border-border bg-background p-6 sm:p-8">
+              <span className="text-xs font-black uppercase tracking-[0.12em] text-primary">Apparel &amp; Staff Branding</span>
+              <h3 className="mt-4 font-display text-xl font-black leading-tight sm:text-2xl">A consistent team presence.</h3>
+              <p className="mt-4 leading-7 text-muted-foreground transition-opacity duration-300 sm:opacity-80 group-hover:opacity-100">
+                Branded apparel and uniforms produced to bring teams together under one clear visual identity.
+              </p>
+              <div className="mt-6 flex items-center gap-2 text-sm font-bold text-foreground">
+                <span className="transition-transform duration-300 group-hover:translate-x-0.5">View this work</span>
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </div>
+            </div>
+          </article>
+
+          <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-6">
+            <div className="overflow-hidden">
+              <img
+                src={signage}
+                alt="Large format signage, roll-up banners and event displays"
+                loading="lazy"
+                width={1200}
+                height={912}
+                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+              />
+            </div>
+            <div className="border-t border-border bg-background p-6 sm:p-8">
+              <span className="text-xs font-black uppercase tracking-[0.12em] text-primary">Large Format &amp; Signage</span>
+              <h3 className="mt-4 font-display text-xl font-black leading-tight sm:text-2xl">Make the brand impossible to miss.</h3>
+              <p className="mt-4 leading-7 text-muted-foreground transition-opacity duration-300 sm:opacity-80 group-hover:opacity-100">
+                Large-format applications designed for offices, events, outdoor environments and high-visibility spaces.
+              </p>
+              <div className="mt-6 flex items-center gap-2 text-sm font-bold text-foreground">
+                <span className="transition-transform duration-300 group-hover:translate-x-0.5">View this work</span>
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </div>
+            </div>
+          </article>
+
+          <article className="group relative overflow-hidden rounded-md border border-border bg-muted lg:col-span-6">
+            <div className="overflow-hidden">
+              <img
+                src={packaging}
+                alt="Branded promotional merchandise, packaging and labels"
+                loading="lazy"
+                width={1200}
+                height={912}
+                className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+              />
+            </div>
+            <div className="border-t border-border bg-background p-6 sm:p-8">
+              <span className="text-xs font-black uppercase tracking-[0.12em] text-primary">Promotional Merchandise</span>
+              <h3 className="mt-4 font-display text-xl font-black leading-tight sm:text-2xl">Branded touchpoints people remember.</h3>
+              <p className="mt-4 leading-7 text-muted-foreground transition-opacity duration-300 sm:opacity-80 group-hover:opacity-100">
+                Useful branded merchandise that extends your organisation's identity beyond the workplace.
+              </p>
+              <div className="mt-6 flex items-center gap-2 text-sm font-bold text-foreground">
+                <span className="transition-transform duration-300 group-hover:translate-x-0.5">View this work</span>
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div className="mt-14 text-center">
+          <Button variant="outline" size="lg" asChild>
+            <Link to="/samples">View Our Work <ArrowRight size={17} /></Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Page() {
   return (
     <>
       <Hero />
       <Solutions />
+      <Portfolio />
     </>
   );
 }
