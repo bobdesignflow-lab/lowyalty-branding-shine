@@ -174,32 +174,32 @@ function HomePage() {
           </div>
           <div className="relative">
             <div className="grid grid-cols-6 grid-rows-2 gap-3 sm:gap-4">
-              <Link to="/samples" className="group relative col-span-6 row-span-2 overflow-hidden rounded-md sm:col-span-3">
-                <img src="/assets/samples/485986991_2932608753579031_1131907068483631116_n.jpg" alt="Corporate stationery samples" loading="lazy" width={1200} height={912} className="aspect-[4/5] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+              <Link to="/samples" search={{ category: "corporate-stationery" }} className="group relative col-span-6 row-span-2 overflow-hidden rounded-md sm:col-span-3">
+                <img src="/assets/samples/corporate-stationery/corporate-stationery.jpg" alt="Corporate stationery samples" loading="lazy" width={1200} height={912} className="aspect-[4/5] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <span className="text-xs font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">01</span>
                   <h3 className="mt-1 font-display text-lg font-bold leading-tight">Corporate Stationery</h3>
                 </div>
               </Link>
-              <Link to="/samples" className="group relative col-span-3 row-span-1 overflow-hidden rounded-md">
-                <img src="/assets/samples/486082583_2932608543579052_152549413297026671_n.jpg" alt="Branded apparel samples" loading="lazy" width={1200} height={912} className="aspect-[4/3] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+              <Link to="/samples" search={{ category: "branded-apparel" }} className="group relative col-span-3 row-span-1 overflow-hidden rounded-md">
+                <img src="/assets/samples/branded-apparel/branded-apparel.jpg" alt="Branded apparel samples" loading="lazy" width={1200} height={912} className="aspect-[4/3] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <span className="text-[10px] font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">02</span>
                   <h3 className="mt-0.5 font-display text-sm font-bold leading-tight">Branded Apparel</h3>
                 </div>
               </Link>
-              <Link to="/samples" className="group relative col-span-3 row-span-1 overflow-hidden rounded-md">
-                <img src="/assets/samples/486086821_2932608466912393_3585091760802311278_n.jpg" alt="Displays and signage samples" loading="lazy" width={1200} height={912} className="aspect-[4/3] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+              <Link to="/samples" search={{ category: "display-signages" }} className="group relative col-span-3 row-span-1 overflow-hidden rounded-md">
+                <img src="/assets/samples/display-signages/display-signages.jpg" alt="Displays and signage samples" loading="lazy" width={1200} height={912} className="aspect-[4/3] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <span className="text-[10px] font-black uppercase tracking-wider text-[oklch(0.82_0.16_85)]">03</span>
                   <h3 className="mt-0.5 font-display text-sm font-bold leading-tight">Displays & Signage</h3>
                 </div>
               </Link>
-              <Link to="/samples" className="group relative col-span-6 row-span-1 overflow-hidden rounded-md sm:col-span-6">
-                <img src="/assets/samples/486248427_2935324666640773_3678842428366277317_n.jpg" alt="Packaging and labels samples" loading="lazy" width={1200} height={912} className="aspect-[16/5] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
+              <Link to="/samples" search={{ category: "packaging-labels" }} className="group relative col-span-6 row-span-1 overflow-hidden rounded-md sm:col-span-6">
+                <img src="/assets/samples/packaging-labels/packaging-labels.jpg" alt="Packaging and labels samples" loading="lazy" width={1200} height={912} className="aspect-[16/5] h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-110"/>
                 <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/15 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-70"/>
                 <div className="absolute inset-y-0 left-0 flex items-center p-5">
                   <div>
