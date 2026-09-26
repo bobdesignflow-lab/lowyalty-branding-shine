@@ -14,10 +14,12 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CartRouteImport } from './routes/cart'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CorporateRouteImport } from './routes/corporate'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ReturnsRouteImport } from './routes/returns'
 import { Route as SamplesRouteImport } from './routes/samples'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ShippingRouteImport } from './routes/shipping'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ProductSlugRouteImport } from './routes/product.$slug'
@@ -47,6 +49,11 @@ const CorporateRoute = CorporateRouteImport.update({
   path: '/corporate',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -65,6 +72,11 @@ const SamplesRoute = SamplesRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShippingRoute = ShippingRouteImport.update({
+  id: '/shipping',
+  path: '/shipping',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ShopRoute = ShopRouteImport.update({
@@ -89,10 +101,12 @@ export interface FileRoutesByFullPath {
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
   '/corporate': typeof CorporateRoute
+  '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/returns': typeof ReturnsRoute
   '/samples': typeof SamplesRoute
   '/services': typeof ServicesRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -103,10 +117,12 @@ export interface FileRoutesByTo {
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
   '/corporate': typeof CorporateRoute
+  '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/returns': typeof ReturnsRoute
   '/samples': typeof SamplesRoute
   '/services': typeof ServicesRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -118,10 +134,12 @@ export interface FileRoutesById {
   '/cart': typeof CartRoute
   '/contact': typeof ContactRoute
   '/corporate': typeof CorporateRoute
+  '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/returns': typeof ReturnsRoute
   '/samples': typeof SamplesRoute
   '/services': typeof ServicesRoute
+  '/shipping': typeof ShippingRoute
   '/shop': typeof ShopRoute
   '/terms': typeof TermsRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -134,10 +152,12 @@ export interface FileRouteTypes {
     | '/cart'
     | '/contact'
     | '/corporate'
+    | '/faq'
     | '/privacy'
     | '/returns'
     | '/samples'
     | '/services'
+    | '/shipping'
     | '/shop'
     | '/terms'
     | '/product/$slug'
@@ -148,10 +168,12 @@ export interface FileRouteTypes {
     | '/cart'
     | '/contact'
     | '/corporate'
+    | '/faq'
     | '/privacy'
     | '/returns'
     | '/samples'
     | '/services'
+    | '/shipping'
     | '/shop'
     | '/terms'
     | '/product/$slug'
@@ -162,10 +184,12 @@ export interface FileRouteTypes {
     | '/cart'
     | '/contact'
     | '/corporate'
+    | '/faq'
     | '/privacy'
     | '/returns'
     | '/samples'
     | '/services'
+    | '/shipping'
     | '/shop'
     | '/terms'
     | '/product/$slug'
@@ -177,10 +201,12 @@ export interface RootRouteChildren {
   CartRoute: typeof CartRoute
   ContactRoute: typeof ContactRoute
   CorporateRoute: typeof CorporateRoute
+  FaqRoute: typeof FaqRoute
   PrivacyRoute: typeof PrivacyRoute
   ReturnsRoute: typeof ReturnsRoute
   SamplesRoute: typeof SamplesRoute
   ServicesRoute: typeof ServicesRoute
+  ShippingRoute: typeof ShippingRoute
   ShopRoute: typeof ShopRoute
   TermsRoute: typeof TermsRoute
   ProductSlugRoute: typeof ProductSlugRoute
@@ -223,6 +249,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CorporateRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -249,6 +282,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shipping': {
+      id: '/shipping'
+      path: '/shipping'
+      fullPath: '/shipping'
+      preLoaderRoute: typeof ShippingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/shop': {
@@ -281,10 +321,12 @@ const rootRouteChildren: RootRouteChildren = {
   CartRoute: CartRoute,
   ContactRoute: ContactRoute,
   CorporateRoute: CorporateRoute,
+  FaqRoute: FaqRoute,
   PrivacyRoute: PrivacyRoute,
   ReturnsRoute: ReturnsRoute,
   SamplesRoute: SamplesRoute,
   ServicesRoute: ServicesRoute,
+  ShippingRoute: ShippingRoute,
   ShopRoute: ShopRoute,
   TermsRoute: TermsRoute,
   ProductSlugRoute: ProductSlugRoute,
