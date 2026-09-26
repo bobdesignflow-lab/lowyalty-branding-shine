@@ -232,7 +232,7 @@ const delivery: FaqItem[] = [
         Yes. Customers may, where applicable, collect finished orders in
         person from one of our branches:{" "}
         <strong>Ngong</strong> (3T Building, 1st Floor, Room 207) or{" "}
-        <strong>Nairobi</strong> (Printers Arcade, 1st Floor, Room M9).
+        <strong>Limuru</strong> (Clay Citi-wide Plaza, 1st Floor, Room 1-2).
         If you plan to collect, please mention it when requesting your
         quotation so we can schedule accordingly.
       </>

@@ -142,8 +142,8 @@ function Page() {
                 <strong>Ngong</strong> — 3T Building, 1st Floor, Room 207
               </li>
               <li>
-                <strong>Nairobi</strong> — Printers Arcade, 1st Floor, Room
-                M9
+                <strong>Limuru</strong> — Clay Citi-wide Plaza, 1st Floor, Room
+                1-2
               </li>
             </ul>
             <p>

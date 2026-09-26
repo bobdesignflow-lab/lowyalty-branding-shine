@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     meta(
       "Contact Lowyalty Brandingline",
-      "Request a quote for printing, branding, signage, packaging or branded apparel in Nairobi and Ngong."
+      "Request a quote for printing, branding, signage, packaging or branded apparel in Ngong and Limuru."
     ),
   component: Page,
 });
@@ -33,11 +33,11 @@ const mapLocations: MapLocation[] = [
     mapTitle: "Lowyalty Brandingline Ltd Ngong location map",
   },
   {
-    town: "Nairobi",
-    address: "Printers Arcade\n1st Floor, Room M9\nNairobi",
-    fullAddress: "Printers Arcade, 1st Floor, Room M9, Nairobi, Kenya",
-    mapQuery: encodeURIComponent("Printers Arcade Nairobi Kenya"),
-    mapTitle: "Lowyalty Brandingline Ltd Nairobi location map",
+    town: "Limuru",
+    address: "Clay Citi-wide Plaza\n1st Floor, Room 1-2\nLimuru",
+    fullAddress: "Clay Citi-wide Plaza, 1st Floor, Room 1-2, Limuru, Kenya",
+    mapQuery: encodeURIComponent("Clay Citi-wide Plaza Limuru Kenya"),
+    mapTitle: "Lowyalty Brandingline Ltd Limuru location map",
   },
 ];
 
