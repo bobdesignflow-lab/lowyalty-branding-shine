@@ -5,6 +5,6 @@ export const phones = [
 export const email = "lowyaltybrandingline17@gmail.com";
 export const whatsappUrl = "https://wa.me/254708502332";
 export const locations = [
-  { town: "Limuru Town", address: "Clay Citi Wide Plaza, 1st Floor, Room 1-2" },
-  { town: "Ngong Town", address: "3T Park Place, 1st Floor, Room S217" },
+  { town: "Ngong", address: "3T Building, 1st Floor, Room 207" },
+  { town: "Nairobi", address: "Printers Arcade, 1st Floor, Room M9" },
 ];
