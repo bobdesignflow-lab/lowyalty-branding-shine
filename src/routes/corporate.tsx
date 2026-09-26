@@ -59,14 +59,49 @@ function Hero() {
   );
 }
 
+const solutions = [
+  { name: "Corporate Print", desc: "Professional print materials designed to keep your organisation consistent, credible and ready for everyday business.", items: ["Business Cards","Letterheads","Company Profiles","Brochures","Flyers","Presentation Folders","Receipts & Invoice Books","Corporate Stationery"] },
+  { name: "Office & Environment Branding", desc: "Transform physical workspaces into environments that clearly communicate your organisation and its identity.", items: ["Office Branding","Wall Graphics","Glass Branding","Reception Branding","Directional Signage","Room Identification","Internal Communication Displays","Workspace Signage"] },
+  { name: "Staff & Apparel", desc: "Branded apparel that gives teams a consistent and professional appearance across everyday operations and customer-facing environments.", items: ["Polo Shirts","Corporate Shirts","Hoodies","T-Shirts","Workwear","Uniform Branding","Embroidery","Screen Printing"] },
+  { name: "Signage & Large Format", desc: "High-impact visual branding produced for offices, events, retail environments and outdoor spaces.", items: ["Large Format Printing","Banners","Roll-Up Banners","Teardrop Banners","Posters","Outdoor Signage","Wall Branding","Event Displays"] },
+  { name: "Promotional Merchandise", desc: "Branded items that keep your organisation visible beyond the office and create useful, memorable touchpoints.", items: ["Branded Mugs","Water Bottles","Flasks","Notebooks","Diaries","Promotional Gifts","Branded Bags","Corporate Giveaways"] },
+  { name: "Design & Visual Communication", desc: "Creative support that turns your brand requirements into clear, professional and production-ready visual materials.", items: ["Graphic Design","Corporate Artwork","Print-Ready Artwork","Marketing Materials","Campaign Visuals","Brand Applications","Layout & Artwork Preparation"] },
+];
+
+function Solutions() {
+  return (
+    <section className="site-container section-pad" aria-labelledby="solutions-title">
+      <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr] lg:items-end lg:gap-16">
+        <div>
+          <span className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-muted-foreground"><span className="h-px w-8 bg-primary" />Corporate solutions</span>
+          <h2 id="solutions-title" className="mt-5 max-w-xl font-display text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-[2.6rem]">Everything your brand needs to show up consistently.</h2>
+        </div>
+        <p className="max-w-xl leading-7 text-muted-foreground lg:justify-self-end">From everyday corporate print to branded apparel, office environments, signage and promotional merchandise, we help organisations maintain a consistent and professional presence wherever their brand appears.</p>
+      </div>
+
+      <ol className="mt-14 border-b border-border sm:mt-20">
+        {solutions.map((s, i) => (
+          <li key={s.name} className="group grid gap-4 border-t border-border py-8 transition-colors sm:grid-cols-[4.5rem_1fr] lg:grid-cols-[6rem_1fr_1.15fr] lg:gap-10 lg:py-10">
+            <span className="font-display text-2xl font-extrabold text-primary/40 transition-colors group-hover:text-primary sm:text-4xl">0{i + 1}</span>
+            <div>
+              <h3 className="font-display text-xl font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-1 sm:text-2xl">{s.name}</h3>
+              <p className="mt-3 max-w-md leading-7 text-muted-foreground">{s.desc}</p>
+            </div>
+            <ul className="flex flex-wrap content-start gap-x-5 gap-y-2 text-sm font-medium text-foreground/75 sm:col-start-2 lg:col-start-auto lg:pt-1.5">
+              {s.items.map((it) => <li key={it} className="flex items-center gap-2"><span className="h-1 w-1 rounded-full bg-primary" />{it}</li>)}
+            </ul>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
 function Page() {
   return (
     <>
       <Hero />
-      <div className="site-container section-pad">
-        <div className="grid gap-5 md:grid-cols-3">{["Centralised production","Repeat-order consistency","Multi-location delivery"].map((x,i)=><div key={x} className="border-t-4 border-primary bg-muted p-8"><span className="text-sm font-black text-primary">0{i+1}</span><h2 className="mt-8 font-display text-2xl font-black">{x}</h2><p className="mt-3 leading-7 text-muted-foreground">A clear, accountable workflow built around your brand standards and deadlines.</p></div>)}</div>
-        <div className="mt-12 text-center"><Button asChild><Link to="/contact">Request a corporate quote</Link></Button></div>
-      </div>
+      <Solutions />
     </>
   );
 }
