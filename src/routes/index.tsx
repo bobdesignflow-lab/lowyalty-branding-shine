@@ -1,9 +1,11 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { ArrowRight, Search, Sparkles, CheckCircle2, Clock3, Truck, Palette } from "lucide-react";
+import { ArrowRight, Search, Sparkles, CheckCircle2, Clock3, Truck, Palette, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { categories, products } from "@/lib/catalog";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/lib/cart";
+import { generalQuoteUrl } from "@/lib/whatsapp";
 
 
 type Review = {
@@ -46,6 +48,7 @@ function HomePage() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const search = () => navigate({ to: "/shop", search: { q: query || undefined, category: undefined } });
+  const { items } = useCart();
   return <>
     <section className="relative overflow-hidden bg-foreground text-background">
       <img src="/assets/home/hero/hero.png" alt="Premium branded stationery by Lowyalty" width={1200} height={912} className="absolute inset-0 h-full w-full object-cover object-center opacity-35" />
@@ -278,7 +281,7 @@ function HomePage() {
       </div>
     </section>
 
-    <section className="site-container mb-16 bg-primary px-6 py-14 text-center text-primary-foreground sm:px-12"><h2 className="font-display text-4xl font-black">Ready to make your brand tangible?</h2><p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">Browse our most popular print products or send a custom brief for a tailored quote.</p><div className="mt-7 flex flex-wrap justify-center gap-3"><Button variant="dark" asChild><Link to="/shop" search={{q:undefined,category:undefined}}>Start shopping<ArrowRight size={17}/></Link></Button><Button className="border border-primary-foreground bg-transparent" asChild><Link to="/contact">Request a quote</Link></Button></div></section>
+    <section className="site-container mb-16 bg-primary px-6 py-14 text-center text-primary-foreground sm:px-12"><h2 className="font-display text-4xl font-black">Ready to make your brand tangible?</h2><p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">Browse our most popular print products or send a custom brief for a tailored quote.</p><div className="mt-7 flex flex-wrap justify-center gap-3"><Button variant="dark" asChild><Link to="/shop" search={{q:undefined,category:undefined}}>Start shopping<ArrowRight size={17}/></Link></Button><Button className="border border-primary-foreground bg-transparent" asChild><a href={generalQuoteUrl(items)} target="_blank" rel="noopener noreferrer"><MessageCircle size={17}/>Request a quote on WhatsApp</a></Button></div></section>
   </>;
 }
 

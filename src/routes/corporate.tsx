@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { meta } from "@/components/content-page";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import { useCart } from "@/lib/cart";
+import { corporateQuoteUrl } from "@/lib/whatsapp";
 
 
 export const Route = createFileRoute("/corporate")({
@@ -12,6 +14,7 @@ export const Route = createFileRoute("/corporate")({
 const strip = ["Print", "Branding", "Apparel", "Signage", "Merchandise", "Design"];
 
 function Hero() {
+  const { items } = useCart();
   return (
     <section className="relative overflow-hidden bg-foreground text-background">
       <div className="site-container grid items-center gap-12 pt-14 pb-10 sm:pt-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pt-24 lg:pb-16">
@@ -30,7 +33,7 @@ function Hero() {
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" className="h-12 px-7 transition-transform hover:-translate-y-0.5">
-              <Link to="/contact">Request a Corporate Quote</Link>
+              <a href={corporateQuoteUrl(items)} target="_blank" rel="noopener noreferrer"><MessageCircle size={18}/>Request a Corporate Quote</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="h-12 border-background/25 bg-transparent px-7 text-background hover:bg-background/10 hover:text-background">
               <Link to="/samples">View Our Work</Link>
