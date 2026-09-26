@@ -25,7 +25,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const value = useMemo(() => ({
     items,
     count: items.reduce((sum, item) => sum + item.quantity, 0),
-    total: items.reduce((sum, item) => sum + item.product.price * item.quantity, 0),
+    total: items.reduce((sum, item) => sum + (item.product.price ?? 0) * item.quantity, 0),
     addItem: (product: Product, quantity = 1) => setItems((current) => {
       const found = current.find((item) => item.product.slug === product.slug);
       return found ? current.map((item) => item.product.slug === product.slug ? { ...item, quantity: item.quantity + quantity } : item) : [...current, { product, quantity }];
